@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\MyOutscal\\MineSweeper\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B95A3807-BD5C-4C56-A18C-5A22F1660996}|MineSweeper.vcxproj|D:\\MyOutscal\\MineSweeper\\MineSweeper.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B95A3807-BD5C-4C56-A18C-5A22F1660996}|MineSweeper.vcxproj|solutionrelative:MineSweeper.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MineSweeper.cpp",
+              "DocumentMoniker": "D:\\MyOutscal\\MineSweeper\\MineSweeper.cpp",
+              "RelativeDocumentMoniker": "MineSweeper.cpp",
+              "ToolTip": "D:\\MyOutscal\\MineSweeper\\MineSweeper.cpp",
+              "RelativeToolTip": "MineSweeper.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-16T07:56:42.319Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
