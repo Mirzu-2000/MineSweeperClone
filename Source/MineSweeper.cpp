@@ -1,6 +1,13 @@
 #include "../Header/Game.h"
 #include <iostream>
 
+#include <cstdlib>
+
+
+void clearScreeno() {
+    system("cls"); // Windows-only
+}
+
 int main() {
     int size;
 
@@ -11,6 +18,8 @@ int main() {
         if (size < 9)
             std::cout << "Grid size must be at least 9.\n";
     } while (size < 9);
+
+    clearScreeno();
 
     int totalCells = size * size;
     int mines = static_cast<int>(totalCells * 0.16); // 16% mine density
