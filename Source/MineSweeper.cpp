@@ -1,36 +1,24 @@
+#include "../Header/Game.h"
 #include <iostream>
-#include "../Header/Board.h"
 
 int main() {
-    int size = 9;
-    int mines = 10;
-    Board board(size, mines);
+    int size;
 
-    while (true) {
-        board.display();
-        int row, col;
-        char action;
-        std::cout << "Enter row col (and F to flag or R to reveal): ";
-        std::cin >> row >> col >> action;
+    std::cout << "===== Minesweeper Setup =====\n";
+    do {
+        std::cout << "Enter grid size (n x n), minimum 9: ";
+        std::cin >> size;
+        if (size < 9)
+            std::cout << "Grid size must be at least 9.\n";
+    } while (size < 9);
 
-        if (action == 'F' || action == 'f') {
-            board.toggleFlag(row, col);
-        }
-        else {
-            board.revealCell(row, col);
-            if (board.isMineAt(row, col) && board.isRevealed(row, col)) {
-                std::cout << " Boom! You hit a mine!\n";
-                board.display(true);
-                break;
-            }
-        }
+    int totalCells = size * size;
+    int mines = static_cast<int>(totalCells * 0.16); // 16% mine density
 
-        if (board.isComplete()) {
-            std::cout << " Congratulations! You cleared the board!\n";
-            board.display(true);
-            break;
-        }
-    }
+    std::cout << "Initializing " << size << "x" << size << " grid with " << mines << " mines.\n";
+
+    Game game(size, mines);
+    game.start();
 
     return 0;
 }
