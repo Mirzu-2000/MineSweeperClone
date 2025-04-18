@@ -127,10 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Board.cpp" />
     <ClCompile Include="Source\Cell.cpp" />
     <ClCompile Include="Source\MineSweeper.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Header\Board.h" />
     <ClInclude Include="Header\Cell.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
