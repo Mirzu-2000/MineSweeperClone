@@ -2,6 +2,12 @@
 #include <iostream>
 #include <limits>
 
+#include <cstdlib>
+
+void clearScreen() {
+    system("cls"); // Windows-only
+}
+
 Game::Game(int size, int mines) : size(size), mineCount(mines), gameOver(false) {
     board = new Board(size, mines);
 }
@@ -14,10 +20,12 @@ void Game::printInstructions() const {
     std::cout << "===== Welcome to Text-Based Minesweeper! =====\n";
     std::cout << "Grid Size: " << size << " x " << size << "\n";
     std::cout << "Mines: " << mineCount << "\n\n";
+    std::cout << std::endl;
     std::cout << "How to Play:\n";
     std::cout << " - Enter coordinates as: row column action\n";
     std::cout << "   Example: 3 5 R  ? reveals cell at (3,5)\n";
     std::cout << "   Example: 4 2 F  ? flags cell at (4,2)\n";
+    std::cout << std::endl;
     std::cout << " - Symbols:\n";
     std::cout << "   # : Hidden Cell\n";
     std::cout << "   F : Flagged Cell (you suspect a mine)\n";
@@ -26,6 +34,11 @@ void Game::printInstructions() const {
     std::cout << "   * : Mine (appears only on loss or full reveal)\n";
     std::cout << " - First move is always safe (no mines!)\n";
     std::cout << " - Clear all safe cells to win!\n\n";
+
+    std::cout << "\nPress Enter to continue...";
+    std::cin.ignore();
+    std::cin.get(); // Waits for Enter
+    clearScreen();
 }
 
 void Game::start() {
@@ -43,6 +56,7 @@ void Game::gameLoop() {
             std::cout << " Congratulations, you cleared the board!\n";
             gameOver = true;
         }
+        clearScreen();
     }
 }
 
